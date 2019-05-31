@@ -67,7 +67,7 @@ var AdvertList = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <ul>\r\n        <li *ngFor=\"let a of adverts\">{{ a.title }}</li>\r\n    </ul>\r\n</div>"
+module.exports = "<div class=\"row\">\r\n    <ul>\r\n        <li *ngFor=\"let a of adverts\">{{ a.title }}: {{ a.shortDescription }}</li>\r\n    </ul>\r\n</div>"
 
 /***/ }),
 

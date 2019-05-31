@@ -4,7 +4,7 @@
 
 @Component({
     selector: "advert-list",
-    templateUrl: "productList.component.html",
+    templateUrl: "advertList.component.html",
     styleUrls: []
 })
 export class AdvertList {

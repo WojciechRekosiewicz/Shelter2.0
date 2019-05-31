@@ -13,7 +13,7 @@ var AdvertList = /** @class */ (function () {
     AdvertList = tslib_1.__decorate([
         Component({
             selector: "advert-list",
-            templateUrl: "productList.component.html",
+            templateUrl: "advertList.component.html",
             styleUrls: []
         })
     ], AdvertList);

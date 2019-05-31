@@ -23,6 +23,17 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./app/advert/advertList.component.html":
+/*!**********************************************!*\
+  !*** ./app/advert/advertList.component.html ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\r\n    <ul>\r\n        <li *ngFor=\"let a of adverts\">{{ a.title }}: {{ a.shortDescription }}</li>\r\n    </ul>\r\n</div>"
+
+/***/ }),
+
 /***/ "./app/advert/advertList.component.ts":
 /*!********************************************!*\
   !*** ./app/advert/advertList.component.ts ***!
@@ -50,24 +61,13 @@ var AdvertList = /** @class */ (function () {
     AdvertList = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: "advert-list",
-            template: __webpack_require__(/*! ./productList.component.html */ "./app/advert/productList.component.html")
+            template: __webpack_require__(/*! ./advertList.component.html */ "./app/advert/advertList.component.html")
         })
     ], AdvertList);
     return AdvertList;
 }());
 
 
-
-/***/ }),
-
-/***/ "./app/advert/productList.component.html":
-/*!***********************************************!*\
-  !*** ./app/advert/productList.component.html ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\r\n    <ul>\r\n        <li *ngFor=\"let a of adverts\">{{ a.title }}: {{ a.shortDescription }}</li>\r\n    </ul>\r\n</div>"
 
 /***/ }),
 

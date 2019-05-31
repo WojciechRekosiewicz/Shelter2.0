@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { AdvertList } from './advert/advertList.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+      AppComponent,
+      AdvertList
   ],
   imports: [
     BrowserModule

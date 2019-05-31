@@ -23,6 +23,65 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./app/advert/advertList.component.ts":
+/*!********************************************!*\
+  !*** ./app/advert/advertList.component.ts ***!
+  \********************************************/
+/*! exports provided: AdvertList */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdvertList", function() { return AdvertList; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+
+
+var AdvertList = /** @class */ (function () {
+    function AdvertList() {
+        this.adverts = [{
+                title: "First Animal",
+                shortDescription: "doggo"
+            }, {
+                title: "Second Animal",
+                shortDescription: "doggo"
+            }];
+    }
+    AdvertList = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: "advert-list",
+            template: __webpack_require__(/*! ./productList.component.html */ "./app/advert/productList.component.html")
+        })
+    ], AdvertList);
+    return AdvertList;
+}());
+
+
+
+/***/ }),
+
+/***/ "./app/advert/productList.component.html":
+/*!***********************************************!*\
+  !*** ./app/advert/productList.component.html ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\r\n    <ul>\r\n        <li *ngFor=\"let a of adverts\">{{ a.title }}</li>\r\n    </ul>\r\n</div>"
+
+/***/ }),
+
+/***/ "./app/app.component.html":
+/*!********************************!*\
+  !*** ./app/app.component.html ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\r\n    <h1>\r\n        Welcome to {{title}}!\r\n        <advert-list></advert-list>\r\n    </h1>\r\n    <h1>\r\n        Hi\r\n    </h1>\r\n</div> "
+
+/***/ }),
+
 /***/ "./app/app.component.ts":
 /*!******************************!*\
   !*** ./app/app.component.ts ***!
@@ -44,7 +103,7 @@ var AppComponent = /** @class */ (function () {
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'the-shelter',
-            template: "\n    <!--The content below is only a placeholder and can be replaced.-->\n    <div style=\"text-align:center\">\n      <h1>\n        Welcome to {{title}}!\n      </h1>\n   </div> \n  "
+            template: __webpack_require__(/*! ./app.component.html */ "./app/app.component.html")
         })
     ], AppComponent);
     return AppComponent;
@@ -68,6 +127,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "../node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./app/app.component.ts");
+/* harmony import */ var _advert_advertList_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./advert/advertList.component */ "./app/advert/advertList.component.ts");
+
 
 
 
@@ -78,7 +139,8 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
+                _advert_advertList_component__WEBPACK_IMPORTED_MODULE_4__["AdvertList"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"]

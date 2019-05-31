@@ -3,27 +3,36 @@
     Layout = "_Layout";
     ViewData["Title"] = "Home";
 }
+@section Scripts {
+    <script src="~/clientapp/dist/runtime.js"></script>
+    <script src="~/clientapp/dist/polyfills.js"></script>
+    <script src="~/clientapp/dist/styles.js"></script>
+    <script src="~/clientapp/dist/vendor.js"></script>
+    <script src="~/clientapp/dist/main.js"></script>
+}
 @model IEnumerable<Shelter.Models.Advert>
 @using System.Security.Claims;
 
-    <div class="text-center">
-        <h4 class="display-4">List of adverts</h4>
-        @*<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
 
-        @foreach (var advert in Model)
-        {   
-          <div>  
-                <div class="col-sm-1 col-lg-4 col-md-4">
+    <the-shelter></the-shelter>
+
+@*<div class="text-center">
+    <h4 class="display-4">List of adverts</h4>
+
+    @foreach (var advert in Model)
+    {
+        <div>
+            <div class="col-sm-1 col-lg-4 col-md-4">
                 <div class="thumbnail">
-                    <img src="@advert.ImageUrl" class="thumbnail img" alt=""/>
+                    <img src="@advert.ImageUrl" class="thumbnail img" alt="" />
                     <div class="caption">
                         @if (@advert.ReservingId == null)
                         {
-                        <span class="label label-success badge-pill">Avaiable</span>
+                            <span class="label label-success badge-pill">Avaiable</span>
                         }
                         else
                         {
-                        <span class="label label-danger badge-pill">Reserved</span>
+                            <span class="label label-danger badge-pill">Reserved</span>
                         }
                         <h4>
                             <a asp-controller="Advert" asp-action="Details" asp-route-id="@advert.AdvertId">@advert.Title</a>
@@ -31,9 +40,9 @@
                         <h4>
                             @advert.ShortDescription
                         </h4>
-</div>
+                    </div>
                 </div>
             </div>
-          </div>
-        }
-    </div>
+        </div>
+    }
+</div>*@

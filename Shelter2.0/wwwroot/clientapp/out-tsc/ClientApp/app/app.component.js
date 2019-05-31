@@ -7,7 +7,7 @@ var AppComponent = /** @class */ (function () {
     AppComponent = tslib_1.__decorate([
         Component({
             selector: 'the-shelter',
-            template: "\n    <!--The content below is only a placeholder and can be replaced.-->\n    <div style=\"text-align:center\">\n      <h1>\n        Welcome to {{title}}!\n      </h1>\n   </div> \n  ",
+            templateUrl: "./app.component.html",
             styles: []
         })
     ], AppComponent);

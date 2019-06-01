@@ -1,21 +1,19 @@
 import * as tslib_1 from "tslib";
 import { Component } from "@angular/core";
+import { DataService } from '../shared/dataService';
 var AdvertList = /** @class */ (function () {
-    function AdvertList() {
-        this.adverts = [{
-                title: "First Animal",
-                shortDescription: "doggo"
-            }, {
-                title: "Second Animal",
-                shortDescription: "doggo"
-            }];
+    function AdvertList(data) {
+        this.data = data;
+        this.adverts = [];
+        this.adverts = data.adverts;
     }
     AdvertList = tslib_1.__decorate([
         Component({
             selector: "advert-list",
             templateUrl: "advertList.component.html",
             styleUrls: []
-        })
+        }),
+        tslib_1.__metadata("design:paramtypes", [DataService])
     ], AdvertList);
     return AdvertList;
 }());

@@ -46,23 +46,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdvertList", function() { return AdvertList; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _shared_dataService__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared/dataService */ "./app/shared/dataService.ts");
+
 
 
 var AdvertList = /** @class */ (function () {
-    function AdvertList() {
-        this.adverts = [{
-                title: "First Animal",
-                shortDescription: "doggo"
-            }, {
-                title: "Second Animal",
-                shortDescription: "doggo"
-            }];
+    function AdvertList(data) {
+        this.data = data;
+        this.adverts = [];
+        this.adverts = data.adverts;
     }
     AdvertList = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: "advert-list",
             template: __webpack_require__(/*! ./advertList.component.html */ "./app/advert/advertList.component.html")
-        })
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_dataService__WEBPACK_IMPORTED_MODULE_2__["DataService"]])
     ], AdvertList);
     return AdvertList;
 }());
@@ -128,6 +127,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./app/app.component.ts");
 /* harmony import */ var _advert_advertList_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./advert/advertList.component */ "./app/advert/advertList.component.ts");
+/* harmony import */ var _shared_dataService__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/dataService */ "./app/shared/dataService.ts");
+
 
 
 
@@ -145,11 +146,35 @@ var AppModule = /** @class */ (function () {
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"]
             ],
-            providers: [],
+            providers: [
+                _shared_dataService__WEBPACK_IMPORTED_MODULE_5__["DataService"]
+            ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./app/shared/dataService.ts":
+/*!***********************************!*\
+  !*** ./app/shared/dataService.ts ***!
+  \***********************************/
+/*! exports provided: DataService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DataService", function() { return DataService; });
+var DataService = /** @class */ (function () {
+    function DataService(http) {
+        this.http = http;
+        this.adverts = [];
+    }
+    return DataService;
 }());
 
 

@@ -1,4 +1,5 @@
 ﻿import { Component } from "@angular/core";
+import { DataService } from '../shared/dataService';
 
 
 
@@ -8,11 +9,12 @@
     styleUrls: []
 })
 export class AdvertList {
-    public adverts = [{
-        title: "First Animal",
-        shortDescription: "doggo"
-    }, {
-        title: "Second Animal",
-        shortDescription: "doggo"
-    }];
+
+    
+    constructor(private data: DataService) {
+        this.adverts = data.adverts;
+    }
+
+
+    public adverts = [];
 }

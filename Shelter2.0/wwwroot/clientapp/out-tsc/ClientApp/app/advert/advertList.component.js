@@ -7,12 +7,13 @@ var AdvertList = /** @class */ (function () {
         this.adverts = [];
     }
     AdvertList.prototype.ngOnInit = function () {
-        this.data.loadAdrverts();
-        //.subscribe(success => {
-        //    if (success) {
-        //        this.adverts = this.data.adverts;
-        //    }
-        //});
+        var _this = this;
+        this.data.loadAdrverts()
+            .subscribe(function (success) {
+            if (success) {
+                _this.adverts = _this.data.adverts;
+            }
+        });
     };
     AdvertList = tslib_1.__decorate([
         Component({

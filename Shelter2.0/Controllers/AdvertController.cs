@@ -26,10 +26,13 @@ namespace Shelter.Controllers
 
         public IActionResult List()
         {
+            //var adverts = _advertRepository.GetAllAdverts().OrderBy(p => p.Title);
+
+            //return View(adverts);
+            //as api
             var adverts = _advertRepository.GetAllAdverts().OrderBy(p => p.Title);
 
-            return View(adverts);
-
+            return Ok(adverts);
 
 
             //return View();

@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AdvertList } from './advert/advertList.component';
 import { DataService } from './shared/dataService';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { DataService } from './shared/dataService';
       AdvertList
   ],
   imports: [
-    BrowserModule
+      BrowserModule,
+      HttpClientModule
   ],
   providers: [
         DataService

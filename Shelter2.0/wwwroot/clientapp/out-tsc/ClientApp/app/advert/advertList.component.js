@@ -5,8 +5,15 @@ var AdvertList = /** @class */ (function () {
     function AdvertList(data) {
         this.data = data;
         this.adverts = [];
-        this.adverts = data.adverts;
     }
+    AdvertList.prototype.ngOnInit = function () {
+        this.data.loadAdrverts();
+        //.subscribe(success => {
+        //    if (success) {
+        //        this.adverts = this.data.adverts;
+        //    }
+        //});
+    };
     AdvertList = tslib_1.__decorate([
         Component({
             selector: "advert-list",

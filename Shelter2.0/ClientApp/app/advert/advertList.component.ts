@@ -1,4 +1,4 @@
-﻿import { Component } from "@angular/core";
+﻿import { Component, OnInit } from "@angular/core";
 import { DataService } from '../shared/dataService';
 
 
@@ -8,13 +8,21 @@ import { DataService } from '../shared/dataService';
     templateUrl: "advertList.component.html",
     styleUrls: []
 })
-export class AdvertList {
+export class AdvertList implements OnInit {
 
-    
     constructor(private data: DataService) {
-        this.adverts = data.adverts;
+        
     }
 
 
     public adverts = [];
+
+    ngOnInit(): void {
+        this.data.loadAdrverts()
+            //.subscribe(success => {
+            //    if (success) {
+            //        this.adverts = this.data.adverts;
+            //    }
+            //});
+    }
 }

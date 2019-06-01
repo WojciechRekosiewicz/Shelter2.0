@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <ul>\r\n        <li *ngFor=\"let a of adverts\">{{ a.title }}: {{ a.shortDescription }}</li>\r\n    </ul>\r\n</div>"
+module.exports = "<div class=\"row\">\r\n    <ul>\r\n        <!--<li *ngFor=\"let a of adverts\">{{ a.title }}: {{ a.shortDescription }}</li>-->\r\n        <li *ngFor=\"let a of adverts\">{{ a.title }}</li>\r\n    </ul>\r\n</div>"
 
 /***/ }),
 
@@ -54,8 +54,15 @@ var AdvertList = /** @class */ (function () {
     function AdvertList(data) {
         this.data = data;
         this.adverts = [];
-        this.adverts = data.adverts;
     }
+    AdvertList.prototype.ngOnInit = function () {
+        this.data.loadAdrverts();
+        //.subscribe(success => {
+        //    if (success) {
+        //        this.adverts = this.data.adverts;
+        //    }
+        //});
+    };
     AdvertList = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: "advert-list",
@@ -128,6 +135,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./app/app.component.ts");
 /* harmony import */ var _advert_advertList_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./advert/advertList.component */ "./app/advert/advertList.component.ts");
 /* harmony import */ var _shared_dataService__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/dataService */ "./app/shared/dataService.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "../node_modules/@angular/common/fesm5/http.js");
+
 
 
 
@@ -144,7 +153,8 @@ var AppModule = /** @class */ (function () {
                 _advert_advertList_component__WEBPACK_IMPORTED_MODULE_4__["AdvertList"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"]
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"]
             ],
             providers: [
                 _shared_dataService__WEBPACK_IMPORTED_MODULE_5__["DataService"]
@@ -169,11 +179,32 @@ var AppModule = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DataService", function() { return DataService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "../node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "../node_modules/rxjs/_esm5/operators/index.js");
+
+//import { HttpClient } from 'selenium-webdriver/http';
+
+
+
 var DataService = /** @class */ (function () {
     function DataService(http) {
         this.http = http;
         this.adverts = [];
     }
+    DataService.prototype.loadAdrverts = function () {
+        var _this = this;
+        this.http.get("/Advert/List")
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
+            _this.adverts = data;
+            return true;
+        }));
+    };
+    DataService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], DataService);
     return DataService;
 }());
 

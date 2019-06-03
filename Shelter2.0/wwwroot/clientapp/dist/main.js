@@ -41,7 +41,7 @@ module.exports = "/*body {\r\n    padding-top: 50px;\r\n    padding-bottom: 20px
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n\r\n\r\n<div class=\"text-center\">\r\n\r\n    <h4 class=\"display-4\">List of adverts</h4>\r\n\r\n    <div class=\"product-info col-md-4\" *ngFor=\"let p of adverts\">\r\n        <div class=\"col-sm-1 col-lg-4 col-md-4\">\r\n            <img src=\"{{ p.imageUrl }}\" class=\"img-thumbnail\" [alt]=\"p.title\" />\r\n            <h4>{{ p.title }}</h4>\r\n            <h5><strong>Short Description</strong>: {{ p.shortDescription }}</h5>\r\n        </div>\r\n    </div>\r\n\r\n</div>\r\n\r\n\r\n\r\n\r\n<h1>advertList Component</h1>\r\n"
+module.exports = "\r\n\r\n\r\n<div class=\"text-center\">\r\n\r\n    <h4 class=\"display-4\">List of adverts</h4>\r\n\r\n    <div class=\"col-sm-1 col-lg-4 col-md-4\" *ngFor=\"let p of adverts\">\r\n        <div class=\"thumbnail\">\r\n            <img src=\"{{ p.imageUrl }}\" class=\"img-thumbnail\" [alt]=\"p.title\" />\r\n            <h4>{{ p.title }}</h4>\r\n            <h5><strong>Short Description</strong>: {{ p.shortDescription }}</h5>\r\n        </div>\r\n    </div>\r\n\r\n</div>\r\n\r\n\r\n\r\n\r\n"
 
 /***/ }),
 

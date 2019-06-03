@@ -1,19 +1,21 @@
-﻿<div class="row">
+﻿
+
+
+<div class="text-center">
+
+    <h4 class="display-4">List of adverts</h4>
 
     <div class="product-info col-md-4" *ngFor="let p of adverts">
-        <div class="card bg-light p-1 m-1">
-            <img src="/img/{{ p.title }}.jpg" class="img-fluid" [alt]="p.title" />
-            <h3>{{ p.title }} - {{ p.title }}</h3>
-            <ul class="product-props list-unstyled">
-           
-                <li><strong>Artist</strong>: {{ p.title }}</li>
-                <li><strong>Title</strong>: {{ p.title }}</li>
-                <li><strong>Description</strong>: {{ p.title }}</li>
-            </ul>
-            <button id="buyButton" class="btn btn-success">Buy</button>
+        <div class="col-sm-1 col-lg-4 col-md-4">
+            <img src="{{ p.imageUrl }}" class="img-thumbnail" [alt]="p.title" />
+            <h4>{{ p.title }}</h4>
+            <h5><strong>Short Description</strong>: {{ p.shortDescription }}</h5>
         </div>
     </div>
 
 </div>
+
+
+
 
 <h1>advertList Component</h1>

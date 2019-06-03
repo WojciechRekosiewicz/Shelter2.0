@@ -15,7 +15,7 @@ var AdvertList = /** @class */ (function () {
         Component({
             selector: "advert-list",
             templateUrl: "advertList.component.html",
-            styleUrls: []
+            styleUrls: ["advertList.component.css"]
         }),
         tslib_1.__metadata("design:paramtypes", [DataService])
     ], AdvertList);

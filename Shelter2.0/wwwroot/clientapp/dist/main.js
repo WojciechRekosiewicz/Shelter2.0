@@ -23,6 +23,17 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./app/advert/advertList.component.css":
+/*!*********************************************!*\
+  !*** ./app/advert/advertList.component.css ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/*body {\r\n    padding-top: 50px;\r\n    padding-bottom: 20px;\r\n    background-image: url('/images/site-background.jpg');\r\n    background-repeat: repeat;\r\n}*/\r\n\r\n.sbody-content {\r\n    padding-left: 15px;\r\n    padding-right: 15px;\r\n}\r\n\r\n.thumbnail img{\r\n    width: 20vw;\r\n    height: 20vw;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkNsaWVudEFwcC9hcHAvYWR2ZXJ0L2FkdmVydExpc3QuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7RUFLRTs7QUFFRjtJQUNJLGtCQUFrQjtJQUNsQixtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsWUFBWTtJQUNaLG9CQUFpQjtPQUFqQixpQkFBaUI7QUFDckIiLCJmaWxlIjoiQ2xpZW50QXBwL2FwcC9hZHZlcnQvYWR2ZXJ0TGlzdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLypib2R5IHtcclxuICAgIHBhZGRpbmctdG9wOiA1MHB4O1xyXG4gICAgcGFkZGluZy1ib3R0b206IDIwcHg7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy9pbWFnZXMvc2l0ZS1iYWNrZ3JvdW5kLmpwZycpO1xyXG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IHJlcGVhdDtcclxufSovXHJcblxyXG4uc2JvZHktY29udGVudCB7XHJcbiAgICBwYWRkaW5nLWxlZnQ6IDE1cHg7XHJcbiAgICBwYWRkaW5nLXJpZ2h0OiAxNXB4O1xyXG59XHJcblxyXG4udGh1bWJuYWlsIGltZ3tcclxuICAgIHdpZHRoOiAyMHZ3O1xyXG4gICAgaGVpZ2h0OiAyMHZ3O1xyXG4gICAgb2JqZWN0LWZpdDogY292ZXI7XHJcbn0iXX0= */"
+
+/***/ }),
+
 /***/ "./app/advert/advertList.component.html":
 /*!**********************************************!*\
   !*** ./app/advert/advertList.component.html ***!
@@ -30,7 +41,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n\r\n    <div class=\"product-info col-md-4\" *ngFor=\"let p of adverts\">\r\n        <div class=\"card bg-light p-1 m-1\">\r\n            <img src=\"/img/{{ p.title }}.jpg\" class=\"img-fluid\" [alt]=\"p.title\" />\r\n            <h3>{{ p.title }} - {{ p.title }}</h3>\r\n            <ul class=\"product-props list-unstyled\">\r\n           \r\n                <li><strong>Artist</strong>: {{ p.title }}</li>\r\n                <li><strong>Title</strong>: {{ p.title }}</li>\r\n                <li><strong>Description</strong>: {{ p.title }}</li>\r\n            </ul>\r\n            <button id=\"buyButton\" class=\"btn btn-success\">Buy</button>\r\n        </div>\r\n    </div>\r\n\r\n</div>\r\n\r\n<h1>advertList Component</h1>"
+module.exports = "\r\n\r\n\r\n<div class=\"text-center\">\r\n\r\n    <h4 class=\"display-4\">List of adverts</h4>\r\n\r\n    <div class=\"product-info col-md-4\" *ngFor=\"let p of adverts\">\r\n        <div class=\"col-sm-1 col-lg-4 col-md-4\">\r\n            <img src=\"{{ p.imageUrl }}\" class=\"img-thumbnail\" [alt]=\"p.title\" />\r\n            <h4>{{ p.title }}</h4>\r\n            <h5><strong>Short Description</strong>: {{ p.shortDescription }}</h5>\r\n        </div>\r\n    </div>\r\n\r\n</div>\r\n\r\n\r\n\r\n\r\n<h1>advertList Component</h1>\r\n"
 
 /***/ }),
 
@@ -63,7 +74,8 @@ var AdvertList = /** @class */ (function () {
     AdvertList = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: "advert-list",
-            template: __webpack_require__(/*! ./advertList.component.html */ "./app/advert/advertList.component.html")
+            template: __webpack_require__(/*! ./advertList.component.html */ "./app/advert/advertList.component.html"),
+            styles: [__webpack_require__(/*! ./advertList.component.css */ "./app/advert/advertList.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_dataService__WEBPACK_IMPORTED_MODULE_2__["DataService"]])
     ], AdvertList);
@@ -81,7 +93,7 @@ var AdvertList = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <h1>\r\n        Welcome to {{title}}!\r\n        <advert-list></advert-list>\r\n    </h1>\r\n    <h1>\r\n       app.component\r\n    </h1>\r\n</div> "
+module.exports = "<div class=\"row\">\r\n    <h1>\r\n        Welcome to {{title}}!\r\n        <advert-list></advert-list>\r\n    </h1>\r\n</div> "
 
 /***/ }),
 

@@ -6,7 +6,7 @@ import { DataService } from '../shared/dataService';
 @Component({
     selector: "advert-list",
     templateUrl: "advertList.component.html",
-    styleUrls: []
+    styleUrls: ["advertList.component.css"]
 })
 export class AdvertList implements OnInit {
 

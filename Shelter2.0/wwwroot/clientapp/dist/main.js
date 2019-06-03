@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <ul>\r\n        <!--<li *ngFor=\"let a of adverts\">{{ a.title }}: {{ a.shortDescription }}</li>-->\r\n        <li *ngFor=\"let a of adverts\">{{ a.title }}</li>\r\n    </ul>\r\n</div>"
+module.exports = "<div class=\"row\">\r\n    <ul>\r\n        <!--<li *ngFor=\"let a of adverts\">{{ a.title }}: {{ a.shortDescription }}</li>-->\r\n        <li *ngFor=\"let a of adverts\">{{ a.title }}</li>\r\n\r\n    </ul>\r\n    <h1>///////////////</h1>\r\n</div>"
 
 /***/ }),
 
@@ -55,13 +55,18 @@ var AdvertList = /** @class */ (function () {
         this.data = data;
         this.adverts = [];
     }
+    //ngOnInit() {
+    //    this.data.loadAdrverts()
+    //        .subscribe(() => this.adverts = this.data.adverts);
+    //}
     AdvertList.prototype.ngOnInit = function () {
-        this.data.loadAdrverts();
-        //.subscribe(success => {
-        //    if (success) {
-        //        this.adverts = this.data.adverts;
-        //    }
-        //});
+        var _this = this;
+        this.data.loadAdrverts()
+            .subscribe(function (success) {
+            if (success) {
+                _this.adverts = _this.data.adverts;
+            }
+        });
     };
     AdvertList = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -195,7 +200,7 @@ var DataService = /** @class */ (function () {
     }
     DataService.prototype.loadAdrverts = function () {
         var _this = this;
-        this.http.get("/Advert/List")
+        return this.http.get("/advert/list")
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
             _this.adverts = data;
             return true;

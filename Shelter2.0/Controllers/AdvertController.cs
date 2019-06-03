@@ -24,15 +24,16 @@ namespace Shelter.Controllers
             _userManager = userManager;
         }
 
+        [HttpGet]
         public IActionResult List()
         {
-            //var adverts = _advertRepository.GetAllAdverts().OrderBy(p => p.Title);
-
-            //return View(adverts);
-            //as api
             var adverts = _advertRepository.GetAllAdverts().OrderBy(p => p.Title);
 
-            return Ok(adverts);
+            return View(adverts);
+            //as api
+            //var adverts = _advertRepository.GetAllAdverts().OrderBy(p => p.Title);
+
+            //return Ok(adverts);
 
 
             //return View();

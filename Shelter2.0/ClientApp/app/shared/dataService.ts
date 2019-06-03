@@ -13,12 +13,12 @@ export class DataService {
     public adverts = [];
 
     loadAdrverts() {
-        this.http.get("/Advert/List")
+        return this.http.get("/advert/list")
             .pipe(
-            map((data: any[]) => {
-                this.adverts = data;
-                return true;
-            }))
+                map((data: any[]) => {
+                    this.adverts = data;
+                    return true;
+                })); 
             
             
     }

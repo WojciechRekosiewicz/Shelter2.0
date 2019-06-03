@@ -6,6 +6,10 @@ var AdvertList = /** @class */ (function () {
         this.data = data;
         this.adverts = [];
     }
+    //ngOnInit() {
+    //    this.data.loadAdrverts()
+    //        .subscribe(() => this.adverts = this.data.adverts);
+    //}
     AdvertList.prototype.ngOnInit = function () {
         var _this = this;
         this.data.loadAdrverts()

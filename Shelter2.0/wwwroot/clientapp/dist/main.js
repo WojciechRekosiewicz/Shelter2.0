@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <ul>\r\n        <!--<li *ngFor=\"let a of adverts\">{{ a.title }}: {{ a.shortDescription }}</li>-->\r\n        <li *ngFor=\"let a of adverts\">{{ a.title }}</li>\r\n\r\n    </ul>\r\n    <h1>///////////////</h1>\r\n</div>"
+module.exports = "<div class=\"row\">\r\n\r\n    <div class=\"product-info col-md-4\" *ngFor=\"let p of adverts\">\r\n        <div class=\"card bg-light p-1 m-1\">\r\n            <img src=\"/img/{{ p.title }}.jpg\" class=\"img-fluid\" [alt]=\"p.title\" />\r\n            <h3>{{ p.title }} - {{ p.title }}</h3>\r\n            <ul class=\"product-props list-unstyled\">\r\n           \r\n                <li><strong>Artist</strong>: {{ p.title }}</li>\r\n                <li><strong>Title</strong>: {{ p.title }}</li>\r\n                <li><strong>Description</strong>: {{ p.title }}</li>\r\n            </ul>\r\n            <button id=\"buyButton\" class=\"btn btn-success\">Buy</button>\r\n        </div>\r\n    </div>\r\n\r\n</div>\r\n\r\n<h1>advertList Component</h1>"
 
 /***/ }),
 
@@ -55,18 +55,10 @@ var AdvertList = /** @class */ (function () {
         this.data = data;
         this.adverts = [];
     }
-    //ngOnInit() {
-    //    this.data.loadAdrverts()
-    //        .subscribe(() => this.adverts = this.data.adverts);
-    //}
     AdvertList.prototype.ngOnInit = function () {
         var _this = this;
         this.data.loadAdrverts()
-            .subscribe(function (success) {
-            if (success) {
-                _this.adverts = _this.data.adverts;
-            }
-        });
+            .subscribe(function () { return _this.adverts = _this.data.adverts; });
     };
     AdvertList = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -89,7 +81,7 @@ var AdvertList = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <h1>\r\n        Welcome to {{title}}!\r\n        <advert-list></advert-list>\r\n    </h1>\r\n    <h1>\r\n        Hi\r\n    </h1>\r\n</div> "
+module.exports = "<div class=\"row\">\r\n    <h1>\r\n        Welcome to {{title}}!\r\n        <advert-list></advert-list>\r\n    </h1>\r\n    <h1>\r\n       app.component\r\n    </h1>\r\n</div> "
 
 /***/ }),
 
@@ -200,7 +192,7 @@ var DataService = /** @class */ (function () {
     }
     DataService.prototype.loadAdrverts = function () {
         var _this = this;
-        return this.http.get("/advert/list")
+        return this.http.get("/api/Adverts")
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
             _this.adverts = data;
             return true;

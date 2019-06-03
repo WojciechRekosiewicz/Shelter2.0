@@ -10,7 +10,7 @@ var DataService = /** @class */ (function () {
     }
     DataService.prototype.loadAdrverts = function () {
         var _this = this;
-        return this.http.get("/advert/list")
+        return this.http.get("/api/Adverts")
             .pipe(map(function (data) {
             _this.adverts = data;
             return true;

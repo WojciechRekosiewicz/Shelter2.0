@@ -6,18 +6,10 @@ var AdvertList = /** @class */ (function () {
         this.data = data;
         this.adverts = [];
     }
-    //ngOnInit() {
-    //    this.data.loadAdrverts()
-    //        .subscribe(() => this.adverts = this.data.adverts);
-    //}
     AdvertList.prototype.ngOnInit = function () {
         var _this = this;
         this.data.loadAdrverts()
-            .subscribe(function (success) {
-            if (success) {
-                _this.adverts = _this.data.adverts;
-            }
-        });
+            .subscribe(function () { return _this.adverts = _this.data.adverts; });
     };
     AdvertList = tslib_1.__decorate([
         Component({

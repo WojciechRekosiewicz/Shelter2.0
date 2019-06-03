@@ -13,7 +13,7 @@ export class DataService {
     public adverts = [];
 
     loadAdrverts() {
-        return this.http.get("/advert/list")
+        return this.http.get("/api/Adverts")
             .pipe(
                 map((data: any[]) => {
                     this.adverts = data;

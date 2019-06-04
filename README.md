@@ -38,6 +38,5 @@ dotnet test
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
+* An idea for application came up with a need of practicing Web developing using .NET. 
 

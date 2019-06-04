@@ -5788,8 +5788,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\LeeGe\source\repos\Shelter2.0\Shelter2.0\ClientApp\polyfills.ts */"./polyfills.ts");
-module.exports = __webpack_require__(/*! C:\Users\LeeGe\source\repos\Shelter2.0\Shelter2.0\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\jit-polyfills.js */"../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
+__webpack_require__(/*! C:\Users\wojte\Source\Repos\Shelter2.0\Shelter2.0\ClientApp\polyfills.ts */"./polyfills.ts");
+module.exports = __webpack_require__(/*! C:\Users\wojte\Source\Repos\Shelter2.0\Shelter2.0\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\jit-polyfills.js */"../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
 
 
 /***/ })

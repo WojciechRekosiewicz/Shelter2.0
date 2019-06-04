@@ -36,8 +36,6 @@ dotnet test
 * **Wojciech Rękosiewicz** - *Initial work* - [Shelter2.0](https://github.com/WojciechRekosiewicz/Shelter2.0)
 * **Piotr Gontarski** - Collabolator
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
 ## Acknowledgments
 
 * Hat tip to anyone whose code was used

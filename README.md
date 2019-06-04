@@ -1,6 +1,5 @@
-# Project Title
-
-Shelter v.2.0 - Web Shelter Application for people who want to sell or give away unwanted animals.
+# Shelter v.2.0
+Web Shelter Application for people who want to sell or give away unwanted animals.
 
 ## Getting Started
 

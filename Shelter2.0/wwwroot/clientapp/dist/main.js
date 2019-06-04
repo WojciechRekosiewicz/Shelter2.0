@@ -282,7 +282,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\LeeGe\source\repos\Shelter2.0\Shelter2.0\ClientApp\main.ts */"./main.ts");
+module.exports = __webpack_require__(/*! C:\Users\wojte\Source\Repos\Shelter2.0\Shelter2.0\ClientApp\main.ts */"./main.ts");
 
 
 /***/ })

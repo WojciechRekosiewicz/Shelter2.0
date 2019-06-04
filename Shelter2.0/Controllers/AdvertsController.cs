@@ -36,9 +36,15 @@ namespace Shelter2._0.Controllers
 
         // GET: api/Adverts/5
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public IActionResult Get(int id)
         {
-            return "value";
+            var advert = _advertRepository.GetAdvertById(id);
+            if (advert == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(advert);
         }
 
         // POST: api/Adverts

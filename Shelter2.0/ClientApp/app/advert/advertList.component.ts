@@ -1,5 +1,6 @@
 ﻿import { Component, OnInit } from "@angular/core";
 import { DataService } from '../shared/dataService';
+import { Advert } from "../shared/advert";
 
 
 
@@ -15,7 +16,7 @@ export class AdvertList implements OnInit {
     }
 
 
-    public adverts = [];
+    public adverts: Advert[] = [];
 
     ngOnInit() {
         this.data.loadAdrverts()

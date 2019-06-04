@@ -2,6 +2,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { Advert } from './advert';
 
 
 @Injectable()
@@ -10,9 +12,9 @@ export class DataService {
     constructor(private http: HttpClient) {
     }
 
-    public adverts = [];
+    public adverts: Advert[] = [];
 
-    loadAdrverts() {
+    loadAdrverts(): Observable<boolean> {
         return this.http.get("/api/Adverts")
             .pipe(
                 map((data: any[]) => {

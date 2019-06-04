@@ -27,8 +27,8 @@ dotnet test
 
 ## Built With
 
-* [C#] - Programming language used
-* [.NET Core 2.2] (https://docs.microsoft.com/pl-pl/dotnet/core/) - development platform 
+* [C#] (https://docs.microsoft.com/pl-pl/dotnet/csharp/) - Programming language used
+* [.NET Core 2.2](https://docs.microsoft.com/pl-pl/dotnet/core/) - development platform 
 * [ASP.NET Core 2.2](https://docs.microsoft.com/pl-pl/aspnet/core/?view=aspnetcore-2.2) - The web framework used
 * [Entity Framework Core](https://docs.microsoft.com/pl-pl/ef/core/) - .net object-relational mapper(ORM) 
 ## Authors

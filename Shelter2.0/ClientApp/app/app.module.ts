@@ -5,11 +5,14 @@ import { AppComponent } from './app.component';
 import { AdvertList } from './advert/advertList.component';
 import { DataService } from './shared/dataService';
 import { HttpClientModule } from '@angular/common/http';
+import { UserAdverts } from './advert/userAdverts/userAdverts';
+
 
 @NgModule({
   declarations: [
       AppComponent,
-      AdvertList
+      AdvertList,
+      UserAdverts
   ],
   imports: [
       BrowserModule,

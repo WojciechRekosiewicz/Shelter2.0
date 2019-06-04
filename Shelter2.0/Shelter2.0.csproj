@@ -15,6 +15,7 @@
   <ItemGroup>
     <None Remove="ClientApp\app\advert\advertList.component.css" />
     <None Remove="ClientApp\app\advert\advertList.component.ts" />
+    <None Remove="ClientApp\app\advert\userAdverts\userAdverts.ts" />
     <None Remove="ClientApp\app\app.component.ts" />
     <None Remove="ClientApp\app\app.module.ts" />
     <None Remove="ClientApp\app\shared\advert.ts" />
@@ -85,6 +86,7 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\app\advert\advertList.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\advert\userAdverts\userAdverts.ts" />
     <TypeScriptCompile Include="ClientApp\app\shared\advert.ts" />
     <TypeScriptCompile Include="ClientApp\app\shared\dataService.ts" />
     <TypeScriptCompile Include="wwwroot\ts\main.ts" />

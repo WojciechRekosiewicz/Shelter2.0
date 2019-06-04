@@ -86,6 +86,51 @@ var AdvertList = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./app/advert/userAdverts/userAdverts.component.html":
+/*!***********************************************************!*\
+  !*** ./app/advert/userAdverts/userAdverts.component.html ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h3>My Adverts</h3>"
+
+/***/ }),
+
+/***/ "./app/advert/userAdverts/userAdverts.ts":
+/*!***********************************************!*\
+  !*** ./app/advert/userAdverts/userAdverts.ts ***!
+  \***********************************************/
+/*! exports provided: UserAdverts */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserAdverts", function() { return UserAdverts; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ClientApp_app_shared_dataService__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ClientApp/app/shared/dataService */ "./app/shared/dataService.ts");
+
+
+
+var UserAdverts = /** @class */ (function () {
+    function UserAdverts(data) {
+        this.data = data;
+    }
+    UserAdverts = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: "user-adverts",
+            template: __webpack_require__(/*! ./userAdverts.component.html */ "./app/advert/userAdverts/userAdverts.component.html")
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [ClientApp_app_shared_dataService__WEBPACK_IMPORTED_MODULE_2__["DataService"]])
+    ], UserAdverts);
+    return UserAdverts;
+}());
+
+
+
+/***/ }),
+
 /***/ "./app/app.component.html":
 /*!********************************!*\
   !*** ./app/app.component.html ***!
@@ -93,7 +138,7 @@ var AdvertList = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <h1>\r\n        Welcome to {{title}}!\r\n        <advert-list></advert-list>\r\n    </h1>\r\n</div> "
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-md-9\">\r\n        <h3>{{ title }}</h3>\r\n        <advert-list></advert-list>\r\n    </div>\r\n    <div class=\"col-md-3\">\r\n        <div class=\"card bg-light p-2\">\r\n            <user-adverts></user-adverts>\r\n        </div>\r\n    </div>\r\n\r\n\r\n</div>"
 
 /***/ }),
 
@@ -145,6 +190,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _advert_advertList_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./advert/advertList.component */ "./app/advert/advertList.component.ts");
 /* harmony import */ var _shared_dataService__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/dataService */ "./app/shared/dataService.ts");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "../node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _advert_userAdverts_userAdverts__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./advert/userAdverts/userAdverts */ "./app/advert/userAdverts/userAdverts.ts");
+
 
 
 
@@ -159,7 +206,8 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
-                _advert_advertList_component__WEBPACK_IMPORTED_MODULE_4__["AdvertList"]
+                _advert_advertList_component__WEBPACK_IMPORTED_MODULE_4__["AdvertList"],
+                _advert_userAdverts_userAdverts__WEBPACK_IMPORTED_MODULE_7__["UserAdverts"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],

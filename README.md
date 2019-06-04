@@ -33,7 +33,8 @@ dotnet test
 * [Entity Framework Core](https://docs.microsoft.com/pl-pl/ef/core/) - .net object-relational mapper(ORM) 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Wojciech Rękosiewicz** - *Initial work* - [Shelter2.0](https://github.com/WojciechRekosiewicz/Shelter2.0)
+* **Piotr Gontarski** - Collabolator
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 

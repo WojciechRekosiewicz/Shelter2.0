@@ -49,29 +49,8 @@ namespace Shelter2._0.Controllers
 
         // POST: api/Adverts
         [HttpPost]
-        public IActionResult Post(Advert advert)
+        public void Post([FromBody] string value)
         {
-            if (User.Identity.IsAuthenticated)
-            {
-                // Getting user's Id from the session
-                // Previous approach which was iterating through all users trying to find matching one
-                // User.FindFirst(ClaimTypes.NameIdentifier).Value;
-                var userId = _userManager.GetUserId(HttpContext.User);
-                advert.AuthorId = userId;
-
-                // Render back to the creation route, otherwise validation does not work
-                if (advert.Title == null || advert.ShortDescription == null || advert.LongDescription == null) return Create();
-
-                // Custom image if user does not provide any
-                if (advert.ImageUrl == null) advert.ImageUrl = "https://img.tickld.com/filter:scale/quill/e/7/1/3/2/9/e7132910dcc33f74a29ac914162f97e82624ce06.jpg?mw=650";
-
-                _advertRepository.Create(advert);
-                return Redirect("/");
-            }
-            else
-            {
-                return Redirect("/Identity/Account/Login");
-            }
         }
 
         // PUT: api/Adverts/5
@@ -82,29 +61,8 @@ namespace Shelter2._0.Controllers
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public void Delete(int id)
         {
-            // Check if user is logged in
-            if (User.Identity.IsAuthenticated)
-            {
-                // Getting logged in user's id
-                var userId = _userManager.GetUserId(HttpContext.User);
-
-                if (_advertRepository.CanDelete(userId, id))
-                {
-                    _advertRepository.Delete(id);
-
-                    // TODO: Redirect to proper page with detailed information
-                    return Redirect("/");
-                }
-                else
-                {
-                    // TODO: Redirect to proper page with detailed information
-                    return Redirect("/");
-                }
-            }
-
-            return Redirect("/");
         }
     }
 }

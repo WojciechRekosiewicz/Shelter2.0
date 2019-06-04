@@ -11,6 +11,8 @@ using Shelter.ViewModels;
 
 namespace Shelter.Controllers
 {
+  
+    
     public class AdvertController : Controller
     {
         private readonly IAdvertRepository _advertRepository;
@@ -24,11 +26,19 @@ namespace Shelter.Controllers
             _userManager = userManager;
         }
 
+        [HttpGet]
         public IActionResult List()
         {
-            var adverts = _advertRepository.GetAllAdverts().OrderBy(p => p.Title);
+            var adverts = _advertRepository.GetAllAdverts();
 
             return View(adverts);
+            //as api
+            //var adverts = _advertRepository.GetAllAdverts().OrderBy(p => p.Title);
+
+            //return Ok(adverts);
+
+
+            //return View();
         }
 
         public IActionResult MyAdverts()

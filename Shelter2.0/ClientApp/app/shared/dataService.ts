@@ -20,8 +20,8 @@ export class DataService {
                 map((data: any[]) => {
                     this.adverts = data;
                     return true;
-                })); 
-            
-            
+                }));           
     }
+
+
 }

@@ -138,7 +138,7 @@ var UserAdverts = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"col-md-9\">\r\n        <h3>{{ title }}</h3>\r\n        <advert-list></advert-list>\r\n    </div>\r\n    <div class=\"col-md-3\">\r\n        <div class=\"card bg-light p-2\">\r\n            <user-adverts></user-adverts>\r\n        </div>\r\n    </div>\r\n\r\n\r\n</div>"
+module.exports = "<div class=\"row\">\r\n    <div>\r\n        <h3>{{ title }}</h3>\r\n        <advert-list></advert-list>\r\n    </div>\r\n    <!--<div class=\"col-md-3\">\r\n        <div class=\"card bg-light p-2\">\r\n            <user-adverts></user-adverts>\r\n        </div>\r\n    </div>-->\r\n\r\n\r\n</div>"
 
 /***/ }),
 
@@ -330,7 +330,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\wojte\Source\Repos\Shelter2.0\Shelter2.0\ClientApp\main.ts */"./main.ts");
+module.exports = __webpack_require__(/*! C:\Users\LeeGe\source\repos\Shelter2.0\Shelter2.0\ClientApp\main.ts */"./main.ts");
 
 
 /***/ })

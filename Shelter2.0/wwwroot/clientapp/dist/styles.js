@@ -557,7 +557,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\wojte\Source\Repos\Shelter2.0\Shelter2.0\ClientApp\styles.css */"./styles.css");
+module.exports = __webpack_require__(/*! C:\Users\LeeGe\source\repos\Shelter2.0\Shelter2.0\ClientApp\styles.css */"./styles.css");
 
 
 /***/ })

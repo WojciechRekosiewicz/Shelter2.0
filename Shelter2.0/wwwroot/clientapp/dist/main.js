@@ -138,7 +138,7 @@ var UserAdverts = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div>\r\n        <h3>{{ title }}</h3>\r\n        <advert-list></advert-list>\r\n    </div>\r\n    <!--<div class=\"col-md-3\">\r\n        <div class=\"card bg-light p-2\">\r\n            <user-adverts></user-adverts>\r\n        </div>\r\n    </div>-->\r\n\r\n\r\n</div>"
+module.exports = "<app-nav-menu>\r\n</app-nav-menu>\r\n<div class=\"row\">\r\n    <div>\r\n        <h3>{{ title }}</h3>\r\n        <advert-list></advert-list>\r\n    </div>\r\n    <!--<div class=\"col-md-3\">\r\n        <div class=\"card bg-light p-2\">\r\n            <user-adverts></user-adverts>\r\n        </div>\r\n    </div>-->\r\n\r\n\r\n</div>"
 
 /***/ }),
 
@@ -191,6 +191,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_dataService__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/dataService */ "./app/shared/dataService.ts");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "../node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _advert_userAdverts_userAdverts__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./advert/userAdverts/userAdverts */ "./app/advert/userAdverts/userAdverts.ts");
+/* harmony import */ var _nav_menu_nav_menu_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./nav-menu/nav-menu.component */ "./app/nav-menu/nav-menu.component.ts");
 
 
 
@@ -199,6 +200,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+//let routes = [
+//    { path: "", component: Advert }
+//];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -207,7 +212,8 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
                 _advert_advertList_component__WEBPACK_IMPORTED_MODULE_4__["AdvertList"],
-                _advert_userAdverts_userAdverts__WEBPACK_IMPORTED_MODULE_7__["UserAdverts"]
+                _advert_userAdverts_userAdverts__WEBPACK_IMPORTED_MODULE_7__["UserAdverts"],
+                _nav_menu_nav_menu_component__WEBPACK_IMPORTED_MODULE_8__["NavMenuComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -220,6 +226,66 @@ var AppModule = /** @class */ (function () {
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./app/nav-menu/nav-menu.component.css":
+/*!*********************************************!*\
+  !*** ./app/nav-menu/nav-menu.component.css ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/*body {\r\n    padding-top: 50px;\r\n    padding-bottom: 20px;\r\n    background-image: url('/images/site-background.jpg');\r\n    background-repeat: repeat;\r\n}*/\r\n\r\n.sbody-content {\r\n    padding-left: 15px;\r\n    padding-right: 15px;\r\n}\r\n\r\n.thumbnail img{\r\n    width: 20vw;\r\n    height: 20vw;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkNsaWVudEFwcC9hcHAvbmF2LW1lbnUvbmF2LW1lbnUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7RUFLRTs7QUFFRjtJQUNJLGtCQUFrQjtJQUNsQixtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsWUFBWTtJQUNaLG9CQUFpQjtPQUFqQixpQkFBaUI7QUFDckIiLCJmaWxlIjoiQ2xpZW50QXBwL2FwcC9uYXYtbWVudS9uYXYtbWVudS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLypib2R5IHtcclxuICAgIHBhZGRpbmctdG9wOiA1MHB4O1xyXG4gICAgcGFkZGluZy1ib3R0b206IDIwcHg7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy9pbWFnZXMvc2l0ZS1iYWNrZ3JvdW5kLmpwZycpO1xyXG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IHJlcGVhdDtcclxufSovXHJcblxyXG4uc2JvZHktY29udGVudCB7XHJcbiAgICBwYWRkaW5nLWxlZnQ6IDE1cHg7XHJcbiAgICBwYWRkaW5nLXJpZ2h0OiAxNXB4O1xyXG59XHJcblxyXG4udGh1bWJuYWlsIGltZ3tcclxuICAgIHdpZHRoOiAyMHZ3O1xyXG4gICAgaGVpZ2h0OiAyMHZ3O1xyXG4gICAgb2JqZWN0LWZpdDogY292ZXI7XHJcbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./app/nav-menu/nav-menu.component.html":
+/*!**********************************************!*\
+  !*** ./app/nav-menu/nav-menu.component.html ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n  \r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <link href=\"/lib/bootstrap/css/bootstrap.css\" rel=\"stylesheet\" />\r\n    <link href=\"/content/site.css\" rel=\"stylesheet\" />\r\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>\r\n</head>\r\n<body>\r\n    <nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n        <div class=\"container\">\r\n            <div class=\"navbar-collapse collapse\">\r\n                <ul class=\"nav navbar-nav\">\r\n                    <li><a href=\"/Advert/List\" class=\"navbar-brand\">Adverts</a></li>\r\n                    <li><a href=\"/Home/Privacy\" >Privacy</a></li>\r\n                 <!--   <partial name=\"_LoginPartial\" />-->\r\n                    <!--@*\r\n                    <li><a asp-controller=\"Feedback\" asp-action=\"Index\">Feedback</a></li>*@-->\r\n                </ul>\r\n            </div>\r\n        </div>\r\n    </nav>\r\n\r\n    <!--<div class=\"container body-content\">\r\n        <div class=\"row\">\r\n            @RenderBody()\r\n        </div>\r\n    </div>\r\n    @RenderSection(\"Scripts\", required: false)-->\r\n</body>\r\n</html>"
+
+/***/ }),
+
+/***/ "./app/nav-menu/nav-menu.component.ts":
+/*!********************************************!*\
+  !*** ./app/nav-menu/nav-menu.component.ts ***!
+  \********************************************/
+/*! exports provided: NavMenuComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavMenuComponent", function() { return NavMenuComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+
+
+var NavMenuComponent = /** @class */ (function () {
+    function NavMenuComponent() {
+        this.isExpanded = false;
+    }
+    NavMenuComponent.prototype.collapse = function () {
+        this.isExpanded = false;
+    };
+    NavMenuComponent.prototype.toggle = function () {
+        this.isExpanded = !this.isExpanded;
+    };
+    NavMenuComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-nav-menu',
+            template: __webpack_require__(/*! ./nav-menu.component.html */ "./app/nav-menu/nav-menu.component.html"),
+            styles: [__webpack_require__(/*! ./nav-menu.component.css */ "./app/nav-menu/nav-menu.component.css")]
+        })
+    ], NavMenuComponent);
+    return NavMenuComponent;
 }());
 
 
@@ -252,7 +318,7 @@ var DataService = /** @class */ (function () {
     }
     DataService.prototype.loadAdrverts = function () {
         var _this = this;
-        return this.http.get("/api/Adverts")
+        return this.http.get("https://localhost:44340/api/Adverts")
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) {
             _this.adverts = data;
             return true;

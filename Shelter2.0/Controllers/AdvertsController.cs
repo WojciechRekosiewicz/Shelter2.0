@@ -25,6 +25,8 @@ namespace Shelter2._0.Controllers
             _userManager = userManager;
         }
 
+
+
         // GET: api/Adverts
         [HttpGet]
         public IActionResult Get()

@@ -18,6 +18,8 @@
     <None Remove="ClientApp\app\advert\userAdverts\userAdverts.ts" />
     <None Remove="ClientApp\app\app.component.ts" />
     <None Remove="ClientApp\app\app.module.ts" />
+    <None Remove="ClientApp\app\nav-menu\nav-menu.component.css" />
+    <None Remove="ClientApp\app\nav-menu\nav-menu.component.ts" />
     <None Remove="ClientApp\app\shared\advert.ts" />
     <None Remove="ClientApp\app\shared\dataService.ts" />
     <None Remove="ClientApp\assets\.gitkeep" />
@@ -41,6 +43,9 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
     <Content Include="ClientApp\app\app.module.ts">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="ClientApp\app\nav-menu\nav-menu.component.css">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
     <Content Include="ClientApp\assets\.gitkeep">
@@ -87,6 +92,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\app\advert\advertList.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\advert\userAdverts\userAdverts.ts" />
+    <TypeScriptCompile Include="ClientApp\app\nav-menu\nav-menu.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\shared\advert.ts" />
     <TypeScriptCompile Include="ClientApp\app\shared\dataService.ts" />
     <TypeScriptCompile Include="wwwroot\ts\main.ts" />

@@ -19,6 +19,7 @@ namespace Shelter.Controllers
 
         public IActionResult Index()
         {
+           // return Redirect("/Advert/List");
             return Redirect("/Advert/List");
         }
 

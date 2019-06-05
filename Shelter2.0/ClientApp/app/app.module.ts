@@ -6,13 +6,19 @@ import { AdvertList } from './advert/advertList.component';
 import { DataService } from './shared/dataService';
 import { HttpClientModule } from '@angular/common/http';
 import { UserAdverts } from './advert/userAdverts/userAdverts';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
 
+
+//let routes = [
+//    { path: "", component: Advert }
+//];
 
 @NgModule({
   declarations: [
       AppComponent,
       AdvertList,
-      UserAdverts
+      UserAdverts,
+      NavMenuComponent
   ],
   imports: [
       BrowserModule,

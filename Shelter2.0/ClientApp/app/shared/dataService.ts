@@ -15,7 +15,7 @@ export class DataService {
     public adverts: Advert[] = [];
 
     loadAdrverts(): Observable<boolean> {
-        return this.http.get("/api/Adverts")
+        return this.http.get("https://localhost:44340/api/Adverts")
             .pipe(
                 map((data: any[]) => {
                     this.adverts = data;
